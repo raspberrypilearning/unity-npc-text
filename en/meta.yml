@@ -1,11 +1,9 @@
-title: unity-npc-text
+title: Show text when the player is near an NPC
 hero_image: images/banner.png
-description: unity-npc-text description
+description: Show a Canvas with Text (and other UI objects) when the player collides with an NPC or other GameObject. 
 version: 4
 listed: false
 copyedit: false
 last_tested: "2021-11-18"
 steps:
-  - title: Introduction
-  - title: Step title
-  - title: What next?
+  - title: Show text when the player is near an NPC
