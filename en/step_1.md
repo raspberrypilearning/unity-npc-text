@@ -1,59 +1,42 @@
-## Introduction
+Add a Box Collider with 'Is Trigger' checked to the NPC GameObject. 
 
-Add project description here. What will learners be making? Broadly what skills will they be learning?
+Right-click on your NPC GameObject in the Hierarchy and add a 'UI' 'Text - TextMeshPro'. If this is the first time you are using TextMeshPro in this project you will be prompted to add assets to your project. 
 
-### What you will make
+Adding a TextMeshPro will also add a Canvas as a container. 
 
---- no-print ---
-Add instructions for interacting with the embedded content here.
+Select the TextMeshPro and add the message you want to display in the Inspector.
 
-<div class="scratch-preview">
-  <iframe allowtransparency="true" width="485" height="402" src="https://scratch.mit.edu/projects/embed/160619869/?autostart=false" frameborder="0"></iframe>
-</div>
---- /no-print ---
+Make sure the player GameObject has the 'Player' tag. 
 
---- print-only ---
-![Complete project](images/showcase_static.png)
---- /print-only ---
+Add a script called 'NPCText' to your NPC:
 
---- collapse ---
----
-title: What you will need
----
-### Hardware
+```
+public class NPCText : MonoBehaviour
+{
+    public GameObject canvas;
 
-+ A computer or tablet capable of running Scratch 3
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            canvas.SetActive(true);
+        }
+    }
 
-### Software
+    void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            canvas.SetActive(false);
+        }
+    }
+}
+```
 
-+ Scratch 3 (either [online](https://scratch.mit.edu/){:target="_blank"} or [offline](https://scratch.mit.edu/download){:target="_blank"})
-+ Python 3
-+ This project can be completed in a web browser using [trinket.io](https://trinket.io/)
+Drag the Canvas GameObject from the Hierarchy into the Canvas property of the 'NPCText' script in the Inspector for your NPC GameObject.
 
-### Downloads
+**Test:** Play your scene and make sure the text appears when the player walks close to the NPC (and triggers the collider) and disappears when it moves outside the collision box. 
 
-+ Download the project [starter file](http://rpf.io/p/en/projectName-go){:target="_blank"} if working offline
+It's a good idea to add another smaller collider to your NPC so your character can't walk through them. 
 
---- /collapse ---
-
---- collapse ---
----
-title: What you will learn
----
-
-+ Learning objective 1
-+ Learning objective 2
-+ Learning objective 3
-
---- /collapse ---
-
---- collapse ---
----
-title: Additional information for educators
----
-
-You can download the completed project [here](http://rpf.io/p/en/projectName-get){:target="_blank"}.
-
-If you need to print this project, please use the [printer-friendly version](https://projects.raspberrypi.org/en/projects/projectName/print){:target="_blank"}.
-
---- /collapse ---
+**Tip:** If you have multiple NPCs that will display a text message when the Player collides with them then you can use the same script for all of them. Just drag the 'NPCText' script from the Project view to the NPC GameObjects in the Hierarchy or Inspector. 
