@@ -10,7 +10,10 @@ Make sure the Player GameObject has the 'Player' tag.
 
 Add code to a script on the NPC GameObject. 
 
-```
+--- code ---
+---
+language: cs
+---
     public GameObject canvas;
 
     void OnTriggerEnter(Collider other)
@@ -28,7 +31,8 @@ Add code to a script on the NPC GameObject.
             canvas.SetActive(false);
         }
     }
-```
+--- /code ---
+
 
 Drag the Canvas GameObject from the Hierarchy into the Canvas property of the script in the Inspector for your NPC GameObject.
 
