@@ -6,18 +6,19 @@ Adding a TextMeshPro will also add a Canvas as a container.
 
 Select the TextMeshPro and add the message you want to display in the Inspector.
 
-Make sure the player GameObject has the 'Player' tag. 
+Make sure the Player GameObject has the 'Player' tag. 
 
-Add a script called 'NPCText' to your NPC:
+Add code to a script on the NPC GameObject. 
 
-```
-public class NPCText : MonoBehaviour
-{
+--- code ---
+---
+language: cs
+---
     public GameObject canvas;
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.CompareTag("Player"))
         {
             canvas.SetActive(true);
         }
@@ -25,15 +26,15 @@ public class NPCText : MonoBehaviour
 
     void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.CompareTag("Player"))
         {
             canvas.SetActive(false);
         }
     }
-}
-```
+--- /code ---
 
-Drag the Canvas GameObject from the Hierarchy into the Canvas property of the 'NPCText' script in the Inspector for your NPC GameObject.
+
+Drag the Canvas GameObject from the Hierarchy into the Canvas property of the script in the Inspector for your NPC GameObject.
 
 **Test:** Play your scene and make sure the text appears when the player walks close to the NPC (and triggers the collider) and disappears when it moves outside the collision box. 
 
