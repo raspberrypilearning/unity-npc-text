@@ -1,14 +1,14 @@
-Add a Box Collider with 'Is Trigger' checked to the NPC GameObject.
+Ajoute au GameObject PNJ un « Box Collider » dont la case « Is Trigger » est cochée.
 
-Right-click on your NPC GameObject in the Hierarchy window and add a 'UI' 'Text - TextMeshPro'. If this is the first time you are using TextMeshPro in this project, you will be prompted to add assets to your project.
+Fais un clic droit sur ton GameObject PNJ dans la fenêtre Hierarchy et ajoute un « UI » « Text - TextMeshPro ». Si c'est la première fois que tu utilises TextMeshPro dans ce projet, tu seras invité à ajouter des assets à ton projet.
 
-Adding a TextMeshPro will also add a Canvas as a container.
+L'ajout d'un TextMeshPro entraîne également l'ajout d'un Canvas comme conteneur.
 
-Select the TextMeshPro and add the message you want to display in the Inspector.
+Sélectionne le TextMeshPro et ajoute le message que tu veux afficher dans l'Inspector.
 
-Make sure the Player GameObject has the Player tag.
+Assure-toi que le GameObject Joueur possède le tag « Joueur ».
 
-Add code to a script on the NPC GameObject.
+Ajoute du code à un script sur le GameObject PNJ.
 
 --- code ---
 ---
@@ -35,10 +35,10 @@ language: cs
 --- /code ---
 
 
-Drag the Canvas GameObject from the Hierarchy window into the Canvas property of the script in the Inspector for your NPC GameObject.
+Fais glisser le GameObject Canvas de la fenêtre Hierarchy dans la propriété Canvas du script dans l'Inspector pour ton GameObject PNJ.
 
-**Test:** Play your scene and make sure the text appears when the Player walks close to the NPC (and triggers the collider) and disappears when it moves outside the collision box.
+**Test :** joue ta scène et vérifie que le texte apparaît lorsque le joueur s'approche du PNJ (et déclenche le collider) et disparaît lorsqu'il sort de la zone de collision.
 
-It's a good idea to add another smaller collider to your NPC so your character can't walk through them.
+C'est une bonne idée d'ajouter un autre collider plus petit à ton PNJ pour que ton personnage ne puisse pas passer à travers.
 
-**Tip:** If you have multiple NPCs that will display a text message when the Player collides with them, then you can use the same script for all of them. Just drag the 'NPCText' script from the Project view to the NPC GameObjects in the Hierarchy or Inspector windows. 
+**Astuce :** si tu as plusieurs PNJ qui afficheront un message textuel lorsque le joueur entrera en collision avec eux, alors tu peux utiliser le même script pour chacun d'entre eux. Il suffit de faire glisser le script « NPCText » de la vue Project vers les GameObjects PNJ dans les fenêtres Hierarchy ou Inspector. 
