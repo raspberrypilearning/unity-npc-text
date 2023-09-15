@@ -1,0 +1,10 @@
+---
+title: Afficher du texte lorsque le joueur est près d'un PNJ
+hero_image: images/banner.png
+description: Afficher un Canvas avec du texte (et d'autres objets UI) quand le joueur rentre en collision avec un PNJ ou d'autres GameObjects
+version: 4
+listed: false
+copyedit: false
+last_tested: "2021-11-18"
+steps:
+  - title: Afficher du texte lorsque le joueur est près d'un PNJ
