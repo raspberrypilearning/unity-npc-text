@@ -1,0 +1,10 @@
+---
+title: Toon tekst wanneer de speler in de buurt van een NPC is
+hero_image: images/banner.png
+description: Toon een Canvas met tekst (en andere UI-objecten) wanneer de speler in botsing komt met een NPC of andere GameObjects
+version: 4
+listed: false
+copyedit: false
+last_tested: "2021-11-18"
+steps:
+  - title: Toon tekst wanneer de speler in de buurt van een NPC is
