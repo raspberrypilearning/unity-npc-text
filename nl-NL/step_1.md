@@ -1,14 +1,14 @@
-Add a Box Collider with 'Is Trigger' checked to the NPC GameObject.
+Voeg een Box Collider met 'Is Trigger' aangevinkt toe aan het NPC GameObject.
 
-Right-click on your NPC GameObject in the Hierarchy window and add a 'UI' 'Text - TextMeshPro'. If this is the first time you are using TextMeshPro in this project, you will be prompted to add assets to your project.
+Klik met de rechtermuisknop op je NPC GameObject in het Hierarchy venster en voeg een 'UI' 'Text - TextMeshPro' toe. Als dit de eerste keer is dat je TextMeshPro gebruikt in dit project, wordt je gevraagd om assets toe te voegen aan je project.
 
-Adding a TextMeshPro will also add a Canvas as a container.
+Als je een TextMeshPro toevoegt, wordt ook een Canvas als container toegevoegd.
 
-Select the TextMeshPro and add the message you want to display in the Inspector.
+Selecteer de TextMeshPro en voeg het bericht toe dat je wil weergeven in de Inspector.
 
-Make sure the Player GameObject has the Player tag.
+Zorg ervoor dat het Player GameObject de Player-tag heeft.
 
-Add code to a script on the NPC GameObject.
+Voeg code toe aan een script op het NPC GameObject.
 
 --- code ---
 ---
@@ -35,10 +35,10 @@ language: cs
 --- /code ---
 
 
-Drag the Canvas GameObject from the Hierarchy window into the Canvas property of the script in the Inspector for your NPC GameObject.
+Sleep het Canvas GameObject vanuit het Hierarchy venster naar de Canvas-eigenschap van het script in de Inspector voor je NPC GameObject.
 
-**Test:** Play your scene and make sure the text appears when the Player walks close to the NPC (and triggers the collider) and disappears when it moves outside the collision box.
+**Test:** Speel je scène en zorg ervoor dat de tekst verschijnt wanneer de speler in de buurt van de NPC loopt (en de botsingen veroorzaakt) en verdwijnt wanneer deze buiten het botsingsveld beweegt.
 
-It's a good idea to add another smaller collider to your NPC so your character can't walk through them.
+Het is een goed idee om nog een kleinere collider aan je NPC toe te voegen, zodat je personage er niet doorheen kan lopen.
 
-**Tip:** If you have multiple NPCs that will display a text message when the Player collides with them, then you can use the same script for all of them. Just drag the 'NPCText' script from the Project view to the NPC GameObjects in the Hierarchy or Inspector windows. 
+**Tip:** Als je meerdere NPC's hebt die een tekstbericht weergeven wanneer de speler botst met hen, dan kun je hetzelfde script gebruiken voor alles. Sleep het 'NPCText'-script van de projectweergave naar de NPC GameObjects in de Hierarchy of Inspector-vensters. 
