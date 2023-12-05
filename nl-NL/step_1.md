@@ -19,7 +19,7 @@ language: cs
     
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Speler"))
+        if (other.CompareTag("Player"))
         {
             canvas.SetActive(true);
         }
@@ -27,7 +27,7 @@ language: cs
     
     void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Speler"))
+        if (other.CompareTag("Player"))
         {
             canvas.SetActive(false);
         }
@@ -41,4 +41,4 @@ Sleep het Canvas GameObject vanuit het Hierarchy venster naar de Canvas-eigensch
 
 Het is een goed idee om nog een kleinere collider aan je NPC toe te voegen, zodat je personage er niet doorheen kan lopen.
 
-**Tip:** Als je meerdere NPC's hebt die een tekstbericht weergeven wanneer de speler botst met hen, dan kun je hetzelfde script gebruiken voor alles. Sleep het 'NPCText'-script van de projectweergave naar de NPC GameObjects in de Hierarchy of Inspector-vensters. 
+**Tip:** Als je meerdere NPC's hebt die een tekstbericht weergeven wanneer de speler met hen botst, dan kun je hetzelfde script gebruiken voor alles. Sleep het 'NPCText'-script van de projectweergave naar de NPC GameObjects in de Hierarchy of Inspector-vensters. 
